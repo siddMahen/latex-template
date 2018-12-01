@@ -7,10 +7,16 @@ build:
 	latex $(DOC)
 	pdflatex $(DOC)
 
+# build:
+#	latex -shell-escape $(DOC)
+#	bibtex $(DOC)
+#	latex -shell-escape $(DOC)
+#	pdflatex -shell-escape $(DOC)
+
 clean:
-	rm $(DOC).aux
-	rm $(DOC).dvi
-	rm $(DOC).log
-	rm $(DOC).out
+	-rm $(DOC).aux
+	-rm $(DOC).dvi
+	-rm $(DOC).log
+	-rm $(DOC).out
 
 .PHONY: build render
